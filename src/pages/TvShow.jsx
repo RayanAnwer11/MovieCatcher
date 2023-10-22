@@ -352,7 +352,7 @@ const HomePage = () => {
             {/* Container for the layout */}
             <div className="container mx-auto sm:max-w-screen-xl flex flex-col sm:flex-row justify-between py-16 gap-2">
                 {/* Reset Guest ID button */}
-                <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 p-5">
+                <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 p-3">
                     <Link to='/FavoriteTV'>
                     <button
                         className="mt-4 sm:mt-0 shrink-0 text-sm bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300 ease-in-out"
@@ -364,50 +364,50 @@ const HomePage = () => {
                 </div>
 
                 {/* Form for adding a movie list */}
-                <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 p-5">
-                    {/* Name input */}
-                    <div className="flex flex-col sm:flex-row items-center mb-2 sm:mb-0">
-                        <label className="mr-2">Name:</label>
-                        <input
-                            className="bg-gray-900 rounded-full focus:ring-2 focus:ring-blue-500 focus:outline-none px-3 py-2 text-sm text-white"
-                            placeholder="Name"
-                            onChange={listNameHandler}
-                        />
-                    </div>
+                    {/* <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 p-5"> */}
+                        {/* Name input */}
+                        {/* <div className="flex flex-col sm:flex-row items-center mb-2 sm:mb-0">
+                            <label className="mr-2">Name:</label>
+                            <input
+                                className="bg-gray-900 rounded-full focus:ring-2 focus:ring-blue-500 focus:outline-none px-3 py-2 text-sm text-white"
+                                placeholder="Name"
+                                onChange={listNameHandler}
+                            />
+                        </div> */}
 
-                    {/* Description input */}
-                    <div className="flex flex-col sm:flex-row items-center mb-2 sm:mb-0">
-                        <label className="mr-2">Description:</label>
-                        <input
-                            className="bg-gray-900 rounded-full focus:ring-2 focus:ring-blue-500 focus:outline-none px-3 py-2 text-sm text-white"
-                            placeholder="Description"
-                            onChange={listDescriptionHandler}
-                        />
-                    </div>
+                        {/* Description input */}
+                        {/* <div className="flex flex-col sm:flex-row items-center mb-2 sm:mb-0">
+                            <label className="mr-2">Description:</label>
+                            <input
+                                className="bg-gray-900 rounded-full focus:ring-2 focus:ring-blue-500 focus:outline-none px-3 py-2 text-sm text-white"
+                                placeholder="Description"
+                                onChange={listDescriptionHandler}
+                            />
+                        </div> */}
 
-                    {/* Add List button */}
-                    <button
-                        className="mt-2 sm:mt-0 text-sm rounded-full bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 transition duration-300 ease-in-out"
-                        onClick={createMovieListHandler}
-                    >
-                        Add List
-                    </button>
-                    <button className="mt-2 sm:mt-0 text-sm rounded-full bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 transition duration-300 ease-in-out"  onClick={showListpressed}>
-                        {getListText()}
-                    </button>
-                    {showList ? (
-                        <div className="bg-black/60 fixed w-half h-half z-10 top-20 left-50">
-                        <MoviesAndTvItem />
-                        <button onClick={()=>{setShowList(!showList)}}>Close</button>
-                        </div>
-                    ):(
-                        ''
-                    )}
+                        {/* Add List button */}
+                        {/* <button
+                            className="mt-2 sm:mt-0 text-sm rounded-full bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 transition duration-300 ease-in-out"
+                            onClick={createMovieListHandler}
+                        >
+                            Add List
+                        </button>
+                        <button className="mt-2 sm:mt-0 text-sm rounded-full bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 transition duration-300 ease-in-out"  onClick={showListpressed}>
+                            {getListText()}
+                        </button>
+                        {showList ? (
+                            <div className="bg-black/60 fixed w-half h-half z-10 top-20 left-50">
+                            <MoviesAndTvItem />
+                            <button onClick={()=>{setShowList(!showList)}}>Close</button>
+                            </div>
+                        ):(
+                            ''
+                        )} */}
+                    {/* </div> */}
                 </div>
-            </div>
 
             <div className="max-w-[1640px] mx-auto sm:max-w-screen-xl">
-                <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold mt-20 px-6 py-4 rounded-lg shadow-lg mb-3">
+                <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold mt-0 px-6 py-3 rounded-lg shadow-lg mb-3">
                     Trending TV Show
                 </h1>
 
