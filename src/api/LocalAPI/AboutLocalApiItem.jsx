@@ -80,7 +80,7 @@ const AboutLocalApiItem = (props) => {
                             <div className="text-2xl font-light text-grey-100">
                                 About {props.name}
                             </div>
-                            <p className="text-sm font-normal text-white max-w-lg">
+                            <p className="text-lg font-normal text-white max-w-lg">
                                 {props.description}
                             </p>
                         </div>
