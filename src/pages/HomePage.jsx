@@ -268,7 +268,7 @@ const HomePage = () => {
                                 <img src="https://icons.iconarchive.com/icons/iconarchive/fat-sugar-food/512/Popcorn-icon.png" alt="Movie Catcher Logo" className="h-10 mr-4 rotate-12 ml-3" />
                             </div>
                             {/* Navbar links for larger screens */}
-                            <div className="hidden lg:flex ml-2 shrink-0">
+                            <div className="hidden lg:flex lg:mr-5  shrink-0">
                                 <Link to='/' className="flex"><a className="text-gray-300 hover:bg-gray-700 hover:text-white transition duration-1000 px-3 py-3 rounded-full text-sm font-medium">Movies</a></Link>
                                 <Link to='/TvShow' className="flex"><a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white transition duration-1000 px-3 py-3 rounded-full text-sm font-medium">Tv Show</a></Link>
                                 <Link to="/About" className="flex">
@@ -279,7 +279,7 @@ const HomePage = () => {
                         {/* Right side of the Navbar */}
                         <div className="hidden md:flex items-center">
                             {/* Search bar */}
-                            <div className="bg-gray-900 rounded-full flex items-center px-2">
+                            <div className="bg-gray-900 rounded-full flex items-center px-2 lg:mr-1">
                                 <AiOutlineSearch size={20} onClick={handleSearchClick} className="cursor-pointer" />
                                 <input className="bg-transparent p-2 focus:outline-none focus:border-blue-500 w-full" type="text" placeholder="Search" onChange={handleInputChange} onKeyUp={handleKeyPress} />
                             </div>

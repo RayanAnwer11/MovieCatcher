@@ -281,7 +281,7 @@ const MovieDetailsItem = (props) => {
                     ))}
 
                     {/* Add to Favorites Button */}
-                    <button onClick={handleLike} className="rounded-md bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">{getButtonText()}</button>
+                    <button onClick={handleLike} className="ml-3 mt-5 sm:mt-[-10px] rounded-md bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">{getButtonText()}</button>
                 </div>
 
                 {/* Back to Home Button */}

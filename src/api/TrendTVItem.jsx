@@ -156,9 +156,9 @@ const TrendTVItem = (props) => {
           )}
         </div>
       </Link>
-      <div className="flex flex-col flex-grow justify-between p-4">
+      <div className="flex flex-col flex-grow justify-between p-4 ">
         {/* Movie Title */}
-        <h1 className="text-xl text-gray-200 font-semibold mb-2">
+        <h1 className="text-xl text-gray-200 font-semibold mb-2 sm:h-20 h-20">
           {props.title}
         </h1>
         <div className="flex justify-between">
@@ -166,7 +166,8 @@ const TrendTVItem = (props) => {
           <p className="text-sm text-gray-600">{props.releaseDate}</p>
 
           {/* Like Button */}
-          <button
+          <div>
+            <button
             className={`hover:text-red-700 transition ${isLiked ? 'text-red-700' : ''}`}
             onClick={handleLike}
             aria-label="Like"
@@ -186,6 +187,7 @@ const TrendTVItem = (props) => {
               />
             </svg>
           </button>
+          </div>
         </div>
       </div>
     </div>

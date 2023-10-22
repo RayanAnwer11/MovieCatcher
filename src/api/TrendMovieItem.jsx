@@ -159,12 +159,12 @@ const TrendMovieItem = (props) => {
       </Link>
       <div className="flex flex-col flex-grow justify-between p-4">
         {/* Movie Title */}
-        <h1 className="text-xl text-gray-200 font-semibold mb-2">
+        <h1 className="text-xl text-gray-200 font-semibold mb-2 sm:h-20 h-20">
           {props.title}
         </h1>
         <div className="flex justify-between">
           {/* Release Date */}
-          <p className="text-sm text-gray-600">{props.releaseDate}</p>
+          <p className="text-sm text-gray-400">{props.releaseDate}</p>
 
           {/* Like Button */}
           <button
