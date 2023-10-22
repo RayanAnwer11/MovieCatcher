@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import userNameHandler from "../components/userNameHandler";
 import LogoutHandler from "../components/LogoutHandler";
 import TrendTVList from "../api/TrendTVList";
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
 
 
 
@@ -194,15 +196,18 @@ const HomePage = () => {
                 console.log("new token:", json)
                 newToken = json.request_token
                 window.open(`https://www.themoviedb.org/authenticate/${newToken}`)
-                const shouldAuthenticate = window.confirm("Do you want to authenticate?");
-        if (shouldAuthenticate) {
-            authenticate()
-        } else {
-            console.log("not authentication")
-            localStorage.removeItem('userName')
-        }
                 
-                
+                confirmAlert({
+                        customUI: ({ onClose }) => {
+                            return (
+                                <div className="custom-ui text-black">
+                                    <h1 className="text-black">Do you want to authenticate?</h1>
+                                    <button onClick={() => { onClose(); authenticate(); }}>Yes</button>
+                                    <button onClick={() => { onClose(); console.log("Not authenticated"); logOut(); localStorage.removeItem('userName'); }}>No</button>
+                                </div>
+                            )
+                        }
+                    })
             })
             .catch(err => console.error('error:' + err));
         } else {
