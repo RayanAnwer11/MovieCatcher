@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import AboutLocalApiList from "./AboutLocalApiList"
+import { Link } from "react-router-dom";
 
 const AboutLocalApiServer = () => {
     const [bioData, setBioData] = useState([]);
@@ -26,6 +27,11 @@ const AboutLocalApiServer = () => {
     }
     return (
         <div>
+            <button className="rounded-md bg-gradient-to-r scroll-smooth md:scroll-auto focus:scroll-auto from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">
+                <Link to="/" >
+                Go Back
+                </Link>
+                </button>
             <AboutLocalApiList bioList={bioData} />
         </div>
     )
