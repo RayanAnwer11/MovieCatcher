@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
-import TrendMovieList from "../api/TrendMovieList";
 import Verification from "./Verification";
 import Footer from "../components/Footer";
-import GenreList from "../components/GenreList";
 import userNameHandler from "../components/userNameHandler";
 import LogoutHandler from "../components/LogoutHandler";
-import MoviesAndTvItem from "../api/MoviesAndTvItem";
 import TrendTVList from "../api/TrendTVList";
 
 
@@ -412,7 +409,7 @@ const HomePage = () => {
                 </h1>
 
                 {/* Display a list of genres */}
-                <GenreList />
+                {/* <GenreList /> */}
 
                 {/* Separator */}
                 <div className="border-b border-gray-600 mt-4 mb-5"></div>

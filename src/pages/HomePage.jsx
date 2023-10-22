@@ -18,7 +18,7 @@ const HomePage = () => {
     const [page, setPage] = useState(1)
     const [activeSearchBoolean, setactiveSearchBoolean] = useState(false)
     let userNameVar = ''
-    let newToken=''
+    let newToken = ''
 
 
     const nextPageHandler = () => {
@@ -175,44 +175,44 @@ const HomePage = () => {
         setGuestId(localStorage.getItem('guestID'))
     }
 
-    const verifyLogin =() =>{
+    const verifyLogin = () => {
         userNameHandler()
-        if(!localStorage.getItem('userName'))  {
-            
+        if (!localStorage.getItem('userName')) {
+
             const url = 'https://api.themoviedb.org/3/authentication/token/new';
             const options = {
-            method: 'GET',
-            headers: {
-                accept: 'application/json',
-                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1Yzc4MzgyOTIzYzdmMTZhNzRiNzliY2Y0MmRiY2I4YyIsInN1YiI6IjY1MGE0MTZlMGQ1ZDg1MDBmZGI3NTBkNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5vlhHdCU3GL4v5Tirdkb84CfhgTRB-kYoOx2IotsQK0'
-            }
-        };
+                method: 'GET',
+                headers: {
+                    accept: 'application/json',
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1Yzc4MzgyOTIzYzdmMTZhNzRiNzliY2Y0MmRiY2I4YyIsInN1YiI6IjY1MGE0MTZlMGQ1ZDg1MDBmZGI3NTBkNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5vlhHdCU3GL4v5Tirdkb84CfhgTRB-kYoOx2IotsQK0'
+                }
+            };
 
-        fetch(url, options)
-            .then(res => res.json())
-            .then(json => {
-                console.log("new token:", json)
-                newToken = json.request_token
-                window.open(`https://www.themoviedb.org/authenticate/${newToken}`)
-                const shouldAuthenticate = window.confirm("Do you want to authenticate?");
-        if (shouldAuthenticate) {
-            authenticate()
-        } else {
-            console.log("not authentication")
-            localStorage.removeItem('userName')
-        }
-                
-                
-            })
-            .catch(err => console.error('error:' + err));
+            fetch(url, options)
+                .then(res => res.json())
+                .then(json => {
+                    console.log("new token:", json)
+                    newToken = json.request_token
+                    window.open(`https://www.themoviedb.org/authenticate/${newToken}`)
+                    const shouldAuthenticate = window.confirm("Do you want to authenticate?");
+                    if (shouldAuthenticate) {
+                        authenticate()
+                    } else {
+                        console.log("not authentication")
+                        localStorage.removeItem('userName')
+                    }
+
+
+                })
+                .catch(err => console.error('error:' + err));
         } else {
             console.log("logout")
-    }
+        }
     }
 
-    
 
-    const authenticate =() =>{
+
+    const authenticate = () => {
         localStorage.removeItem("SessionID")
         console.log("before sending: ", newToken)
         const url = 'https://api.themoviedb.org/3/authentication/session/new';
@@ -245,7 +245,7 @@ const HomePage = () => {
             })
             .catch(err => console.error('error:' + err));
     }
-    const logOut =() =>{
+    const logOut = () => {
         LogoutHandler()
     }
 
@@ -284,22 +284,22 @@ const HomePage = () => {
                                 <input className="bg-transparent p-2 focus:outline-none focus:border-blue-500 w-full" type="text" placeholder="Search" onChange={handleInputChange} onKeyUp={handleKeyPress} />
                             </div>
                             <p className="text-lg">
-                    {(localStorage.getItem('userName')) ? (
-                        <p>
-                            {userNameHandler()}
-                            {localStorage.getItem('userName')}
-                        </p>
-                    ) : (
-                        <p>Guest</p>
-                        
-                    )}
-                </p>
-                            
-<button onClick={verifyLogin} className="ml-4 text-sm rounded-full bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">Login</button>
-{/* <button onClick={authenticate} className="ml-4 text-sm rounded-full bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">Authenticate</button> */}
-<button onClick={logOut} className="ml-4 text-sm rounded-full bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">Logout</button>
+                                {(localStorage.getItem('userName')) ? (
+                                    <p>
+                                        {userNameHandler()}
+                                        {localStorage.getItem('userName')}
+                                    </p>
+                                ) : (
+                                    <p>Guest</p>
 
-                            
+                                )}
+                            </p>
+
+                            <button onClick={verifyLogin} className="ml-4 text-sm rounded-full bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">Login</button>
+                            {/* <button onClick={authenticate} className="ml-4 text-sm rounded-full bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">Authenticate</button> */}
+                            <button onClick={logOut} className="ml-4 text-sm rounded-full bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white px-5 py-2 font-semibold transition duration-300 ease-in-out">Logout</button>
+
+
                         </div>
                         {/* Hamburger menu for smaller screens */}
                         <div className="lg:hidden flex items-center ml-5" onClick={() => setNav(!nav)}>
@@ -337,54 +337,22 @@ const HomePage = () => {
                 {/* Reset Guest ID button */}
                 <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 p-3">
                     <Link to='/Favorites'>
-                    <button
-                        className="mt-4 sm:mt-0 shrink-0 text-sm bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300 ease-in-out"
-                        
-                    >
-                        Favorites
-                    </button>
+                        <button
+                            className="mt-4 sm:mt-0 shrink-0 text-sm bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300 ease-in-out"
+
+                        >
+                            Favorites
+                        </button>
                     </Link>
                 </div>
-
-                {/* Form for adding a movie list */}
-                {/* <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 p-5"> */}
-                    {/* Name input */}
-                    {/* <div className="flex flex-col sm:flex-row items-center mb-2 sm:mb-0">
-                        <label className="mr-2">Name:</label>
-                        <input
-                            className="bg-gray-900 rounded-full focus:ring-2 focus:ring-blue-500 focus:outline-none px-3 py-2 text-sm text-white"
-                            placeholder="Name"
-                            onChange={listNameHandler}
-                        />
-                    </div> */}
-
-                    {/* Description input */}
-                    {/* <div className="flex flex-col sm:flex-row items-center mb-2 sm:mb-0">
-                        <label className="mr-2">Description:</label>
-                        <input
-                            className="bg-gray-900 rounded-full focus:ring-2 focus:ring-blue-500 focus:outline-none px-3 py-2 text-sm text-white"
-                            placeholder="Description"
-                            onChange={listDescriptionHandler}
-                        />
-                    </div> */}
-
-                    {/* Add List button */}
-                    {/* <button
-                        className="mt-2 sm:mt-0 text-sm rounded-full bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 transition duration-300 ease-in-out"
-                        onClick={createMovieListHandler}
-                    >
-                        Add List
-                    </button>
-                </div> */}
             </div>
-
             <div className="max-w-[1640px] mx-auto sm:max-w-screen-xl">
                 <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold mt-0 px-6 py-4 rounded-lg shadow-lg mb-3">
                     Trending Movies
                 </h1>
 
                 {/* Display a list of genres */}
-                <GenreList />
+                {/* <GenreList /> */}
 
                 {/* Separator */}
                 <div className="border-b border-gray-600 mt-4 mb-5"></div>
@@ -435,7 +403,7 @@ const HomePage = () => {
                         </p>
                     ) : (
                         <p>Guest</p>
-                        
+
                     )}
                 </p>
             </div>
