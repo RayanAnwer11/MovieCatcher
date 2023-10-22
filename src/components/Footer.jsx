@@ -1,11 +1,11 @@
-import React from 'react';
+
 
 const Footer = () => {
     return (
         <footer className='bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black mt-2 border-t border-gray-600 rounded-md'>
             <div className="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
                 <div className="flex justify-center mt-8 space-x-6 text-gray-400">
-                    <a href="https://www.facebook.com/" className="text-gray-00 hover:text-gray-500">
+                    {/* <button onClick={()=>{window.open(props.linkedin,"_blank")}} className="text-gray-00 hover:text-gray-500">
                         <span className="sr-only">Facebook</span>
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path
@@ -14,9 +14,9 @@ const Footer = () => {
                                 clipRule="evenodd"
                             />
                         </svg>
-                    </a>
+                    </button> */}
 
-                    <a href="https://www.instagram.com/" className="text-gray-400 hover:text-gray-500">
+                    {/* <button onClick={()=>{window.open("","_blank")}} className="text-gray-400 hover:text-gray-500">
                         <span className="sr-only">Instagram</span>
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path
@@ -25,18 +25,9 @@ const Footer = () => {
                                 clipRule="evenodd"
                             />
                         </svg>
-                    </a>
+                    </button> */}
 
-                    <a href="https://twitter.com/" className="text-gray-400 hover:text-gray-500">
-                        <span className="sr-only">Twitter</span>
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                            />
-                        </svg>
-                    </a>
-
-                    <a href="https://github.com/" className="text-gray-400 hover:text-gray-500">
+                    <button onClick={()=>{window.open("https://github.com/RayanAnwer11/MovieCatcher","_blank")}} className="text-gray-400 hover:text-gray-500">
                         <span className="sr-only">GitHub</span>
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path
@@ -45,18 +36,18 @@ const Footer = () => {
                                 clipRule="evenodd"
                             />
                         </svg>
-                    </a>
-
-                    <a href="https://www.linkedin.com/" className="text-gray-400 hover:text-gray-500">
+                    </button>
+                    <p className="mt-8 text-base text-center text-gray-400">
+                    &copy; 2023<a href="/"> MovieCatcher</a>, Inc. All rights reserved.
+                </p>
+                    {/* <button onClick={()=>{window.open(props.linkedin,"_blank")}} className="text-gray-400 hover:text-gray-500">
                         <span className="sr-only">LinkedIn</span>
                         <svg className="w-6 h-6" fill="currentColor" aria-hidden="true" width="100" height="100" viewBox="0 0 48 48">
                             <path fill="#0078d4" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z"></path><path d="M30,37V26.901c0-1.689-0.819-2.698-2.192-2.698c-0.815,0-1.414,0.459-1.779,1.364	c-0.017,0.064-0.041,0.325-0.031,1.114L26,37h-7V18h7v1.061C27.022,18.356,28.275,18,29.738,18c4.547,0,7.261,3.093,7.261,8.274	L37,37H30z M11,37V18h3.457C12.454,18,11,16.528,11,14.499C11,12.472,12.478,11,14.514,11c2.012,0,3.445,1.431,3.486,3.479	C18,16.523,16.521,18,14.485,18H18v19H11z" opacity=".05"></path><path d="M30.5,36.5v-9.599c0-1.973-1.031-3.198-2.692-3.198c-1.295,0-1.935,0.912-2.243,1.677	c-0.082,0.199-0.071,0.989-0.067,1.326L25.5,36.5h-6v-18h6v1.638c0.795-0.823,2.075-1.638,4.238-1.638	c4.233,0,6.761,2.906,6.761,7.774L36.5,36.5H30.5z M11.5,36.5v-18h6v18H11.5z M14.457,17.5c-1.713,0-2.957-1.262-2.957-3.001	c0-1.738,1.268-2.999,3.014-2.999c1.724,0,2.951,1.229,2.986,2.989c0,1.749-1.268,3.011-3.015,3.011H14.457z" opacity=".07"></path><path fill="#fff" d="M12,19h5v17h-5V19z M14.485,17h-0.028C12.965,17,12,15.888,12,14.499C12,13.08,12.995,12,14.514,12	c1.521,0,2.458,1.08,2.486,2.499C17,15.887,16.035,17,14.485,17z M36,36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698	c-1.501,0-2.313,1.012-2.707,1.99C24.957,25.543,25,26.511,25,27v9h-5V19h5v2.616C25.721,20.5,26.85,19,29.738,19	c3.578,0,6.261,2.25,6.261,7.274L36,36L36,36z"></path>
                         </svg>
-                    </a>
+                    </button> */}
                 </div>
-                <p className="mt-8 text-base text-center text-gray-400">
-                    &copy; 2023<a href="/"> MovieCatcher</a>, Inc. All rights reserved.
-                </p>
+                
             </div>
         </footer>
     );
