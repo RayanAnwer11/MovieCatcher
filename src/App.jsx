@@ -11,6 +11,7 @@ import LoginIn from "./pages/LoginIn";
 import Favorites from "./pages/favorites";
 import TvShow from "./pages/TvShow";
 import TVDetailsPages from "./pages/TVDetailsPages";
+import FavoritesTV from "./pages/FavoritesTV";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path='/About' element={<AboutPage />} />
         <Route path='/Verification' element={<Verification />} />
         <Route path='/Favorites' element={<Favorites />} />
+        <Route path='/FavoriteTV' element={<FavoritesTV />} />
         <Route path='/TvShow' element={<TvShow />} />
         <Route path='/TvDetailsPage' element={<TVDetailsPages />} />
       </Routes>

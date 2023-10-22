@@ -289,7 +289,7 @@ const HomePage = () => {
                             <Link to='/' className="flex"><a className="text-gray-300 hover:bg-gray-700 hover:text-white transition duration-1000 px-3 py-3 rounded-full text-sm font-medium">Movies</a></Link>
                                 <a className="text-gray-300 hover:bg-gray-700 hover:text-white transition duration-1000 px-3 py-3 rounded-full text-sm font-medium"><Link to='/TvShow'>Tv Show</Link></a>
                                 <Link to="/About" className="flex">
-                                    <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white transition duration-1000 px-3 py-3 rounded-full text-sm font-medium">About us</a>
+                                    <a className="text-gray-300 hover:bg-gray-700 hover:text-white transition duration-1000 px-3 py-3 rounded-full text-sm font-medium">About us</a>
                                 </Link>
                             </div>
                         </div>
@@ -353,7 +353,7 @@ const HomePage = () => {
             <div className="container mx-auto sm:max-w-screen-xl flex flex-col sm:flex-row justify-between py-16 gap-2">
                 {/* Reset Guest ID button */}
                 <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 p-5">
-                    <Link to='/Favorites'>
+                    <Link to='/FavoriteTV'>
                     <button
                         className="mt-4 sm:mt-0 shrink-0 text-sm bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300 ease-in-out"
                         

@@ -29,7 +29,7 @@ const TrendTVItem = (props) => {
     fetch(url, options)
         .then(res => res.json())
         .then(json => {
-            console.log("Movie ID", json.results)
+            console.log("TV ID", json.results)
             const isMovieLiked = json.results.some(movie => movie.id === props.id)
             setIsLiked(isMovieLiked)
             if (isMovieLiked) {
@@ -51,7 +51,7 @@ const TrendTVItem = (props) => {
         'content-type': 'application/json',
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1Yzc4MzgyOTIzYzdmMTZhNzRiNzliY2Y0MmRiY2I4YyIsInN1YiI6IjY1MGE0MTZlMGQ1ZDg1MDBmZGI3NTBkNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5vlhHdCU3GL4v5Tirdkb84CfhgTRB-kYoOx2IotsQK0'
       },
-      body: JSON.stringify({ media_type: 'movie', media_id: props.id, favorite: true })
+      body: JSON.stringify({ media_type: 'tv', media_id: props.id, favorite: true })
     };
 
     fetch(url, options)

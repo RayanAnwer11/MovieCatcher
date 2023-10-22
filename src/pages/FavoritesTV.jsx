@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import TrendMovieList from "../api/TrendMovieList";
 import { useEffect, useState } from "react";
+import TrendTVList from "../api/TrendTVList";
 
 const FavoritesTV = () => {
     const [favMovies,setFavMovies]= useState([])
@@ -39,7 +39,7 @@ const FavoritesTV = () => {
                     </Link>
                     </div>
                     </div>
-                    {favMovies.results && <TrendMovieList trendMovies={favMovies.results} />}
+                    {favMovies.results && <TrendTVList trendMovies={favMovies.results} />}
         </div>
     )
 
