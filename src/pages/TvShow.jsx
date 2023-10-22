@@ -203,8 +203,8 @@ const HomePage = () => {
                                 <div className="text-black">
                                     <h1 className="text-black text-5xl">Do you want to authenticate?</h1>
                                     <div className="text-center mt-5">
-                                    <button className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white mr-10 px-10 py-4 font-semibold transition duration-300 ease-in-out" onClick={() => { onClose(); authenticate(); }}>Yes</button>
-                                    <button className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white px-10 py-4 font-semibold transition duration-300 ease-in-out" onClick={() => { onClose(); console.log("Not authenticated"); logOut(); localStorage.removeItem('userName'); }}>No</button>
+                                    <button className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white mr-10 px-10 py-4 text-2xl font-semibold transition duration-300 ease-in-out" onClick={() => { onClose(); authenticate(); }}>Yes</button>
+                                    <button className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white px-10 py-4 text-2xl font-semibold transition duration-300 ease-in-out" onClick={() => { onClose(); console.log("Not authenticated"); logOut(); localStorage.removeItem('userName'); }}>No</button>
                                     </div>
                                 </div>
                             )

@@ -204,8 +204,8 @@ const HomePage = () => {
                                 <div className="text-black">
                                     <h1 className="text-black text-5xl">Do you want to authenticate?</h1>
                                     <div className="text-center mt-5">
-                                    <button className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white mr-10 px-10 py-4 font-semibold transition duration-300 ease-in-out" onClick={() => { onClose(); authenticate(); }}>Yes</button>
-                                    <button className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white px-10 py-4 font-semibold transition duration-300 ease-in-out" onClick={() => { onClose(); console.log("Not authenticated"); logOut(); localStorage.removeItem('userName'); }}>No</button>
+                                    <button className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white mr-10 px-10 py-4 text-2xl font-semibold transition duration-300 ease-in-out" onClick={() => { onClose(); authenticate(); }}>Yes</button>
+                                    <button className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white px-10 py-4 text-2xl font-semibold transition duration-300 ease-in-out" onClick={() => { onClose(); console.log("Not authenticated"); logOut(); localStorage.removeItem('userName'); }}>No</button>
                                     </div>
                                 </div>
                             )
@@ -279,7 +279,7 @@ const HomePage = () => {
                             {/* Logo and brand */}
                             <div className="flex-shrink-0 flex items-center">
                                 {/* Movie Catcher Logo */}
-                                <span className="text-xl font-serif sm:text-3xl md:text-3xl lg:text-4xl font-bold">
+                                <span className="text-xl font-serif sm:text-3xl md:text-3xl lg:text-4xl font-bold cursor-default">
                                     <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-red-600">M</span>ovies
                                     <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-red-600">C</span>atcher
                                 </span>
