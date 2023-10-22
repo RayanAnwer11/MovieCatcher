@@ -351,9 +351,9 @@ const HomePage = () => {
             </nav>
 
             {/* Container for the layout */}
-            <div className="container mx-auto sm:max-w-screen-xl flex flex-col sm:flex-row justify-between py-16 gap-2">
+            <div className="container mx-auto sm:max-w-screen-xl flex flex-col sm:flex-row justify-between gap-2">
                 {/* Reset Guest ID button */}
-                <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 p-3">
+                <div className="flex flex-col sm:flex-row justify-between mt-4 sm:mt-0 sm:ml-10 items-center gap-3 px-3 py-20">
                     <Link to='/Favorites'>
                         <button
                             className="mt-4 sm:mt-0 shrink-0 text-sm bg-blue-500 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300 ease-in-out"
@@ -365,7 +365,7 @@ const HomePage = () => {
                 </div>
             </div>
             <div className="max-w-[1640px] mx-auto sm:max-w-screen-xl">
-                <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold mt-0 px-6 py-4 rounded-lg shadow-lg mb-3">
+                <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold mt-[-40px] px-6 rounded-lg shadow-lg mb-3">
                     Trending Movies
                 </h1>
 
