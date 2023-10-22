@@ -3,6 +3,8 @@ import rayanImg from '../../assets/Rayan.jpg'
 import jaeImg from '../../assets/Jae.jpg'
 import koreyImg from '../../assets/Korey.jpg'
 import SholaImg from '../../assets/Shola.jpg'
+import kamronImg from '../../assets/Kamron.png'
+
 
 
 const AboutLocalApiItem = (props) => {
@@ -20,6 +22,9 @@ const AboutLocalApiItem = (props) => {
             break;
         case 'shola':
             postImage = SholaImg
+            break;
+            case 'kamron':
+            postImage = kamronImg
             break;
     }
 
