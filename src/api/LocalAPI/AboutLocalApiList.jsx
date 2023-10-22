@@ -12,6 +12,8 @@ const AboutLocalApiList = (props) => {
                     name={bio.name}
                     description={bio.description}
                     image={bio.image}
+                    linkedin={bio.linkedin}
+                    github={bio.github}
                 />
             ))}
         </ul>
