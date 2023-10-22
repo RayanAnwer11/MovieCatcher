@@ -6,7 +6,9 @@ const TrendMovieItem = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   useEffect(() => {
+    if((localStorage.getItem('SessionID'))){
     checkFavorite();
+    }
 }, []);
 
   const handleMouseEnter = () => {

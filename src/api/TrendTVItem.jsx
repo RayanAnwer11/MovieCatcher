@@ -6,7 +6,8 @@ const TrendTVItem = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   useEffect(() => {
-    checkFavorite();
+    if((localStorage.getItem('SessionID'))){
+    checkFavorite();}
 }, []);
 
   const handleMouseEnter = () => {
@@ -16,7 +17,7 @@ const TrendTVItem = (props) => {
     setIsHovered(false)
   }
   const checkFavorite = () => {
-    const url = `https://api.themoviedb.org/3/account/20465724/favorite/movies?language=en-US&page=1&session_id=${localStorage.getItem('SessionID')}&sort_by=created_at.asc`;
+    const url = `https://api.themoviedb.org/3/account/20465724/favorite/tv?language=en-US&page=1&session_id=${localStorage.getItem('SessionID')}&sort_by=created_at.asc`;
     const options = {
         method: 'GET',
         headers: {
