@@ -39,10 +39,10 @@ public class Populator implements CommandLineRunner{
         Bio Kam = new Bio(movieGen1, "Kamron", "I'm passionate about creating and maintaining software solutions that empower users and contribute to a brighter, more efficient future. I excel in coding, problem-solving, and collaboration, ensuring innovative, secure, and user-friendly applications.", "kamron","https://www.linkedin.com/in/kamron-anderson0186/","https://github.com/KamronAnderson");
         bioRepo.save(Kam);
 
-        Bio Jae = new Bio(movieGen1, "Jae", "Jae Descriptions", "jae","https://www.linkedin.com/in/jesse-evans-477a38a4/","https://github.com/jesseevans94" );
+        Bio Jae = new Bio(movieGen1, "Jae", "I am a software engineer who has a passion for creating applications that can help solve problems for people. I favor front end development and specialize in communications", "jae","https://www.linkedin.com/in/jesse-evans-477a38a4/","https://github.com/jesseevans94" );
         bioRepo.save(Jae);
 
-        Bio Shola = new Bio(movieGen1, "Shola", "Shola Descriptions", "shola","https://www.linkedin.com/in/sholzhokage/","https://github.com/SholzWCCI" );
+        Bio Shola = new Bio(movieGen1, "Shola", "I am a technology enthusiast with over 5 years across the medical diagnostic, electronic payment, and anti-counterfeiting spaces respectively. I am a currently undergoing a Java-based full-stack software engineer training at WeCanCodeIt.", "shola","https://www.linkedin.com/in/sholzhokage/","https://github.com/SholzWCCI" );
         bioRepo.save(Shola);
 
         
