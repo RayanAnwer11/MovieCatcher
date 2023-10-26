@@ -234,7 +234,7 @@ const TVDetailsItem = (props) => {
                 <div className="mt-5 text-center md:text-left">
 
                     {/* Official Website Link */}
-                    <a href={props.homepage} className="text-blue-500 hover:underline">Official Website</a>
+                    <button className="text-blue-500 hover:underline" onClick={()=>{window.open(props.homepage,"_blank")}}>Official Website</button>
 
                     {/* Featured Cast */}
                     <div className="mt-2 font-semibold">Featured Cast</div>
